@@ -128,6 +128,7 @@ void createWindow(int args, char **argv, int w, int h){
     glutCreateWindow("Bejeweled");
     glClearColor(1, 1, 1, 0);
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_TEXTURE_2D);
 }
 
 

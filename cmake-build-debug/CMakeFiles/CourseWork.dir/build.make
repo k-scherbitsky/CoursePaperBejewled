@@ -43,10 +43,10 @@ RM = /home/konstantin/Documents/jetbrains/clion-2017.2.3/bin/cmake/bin/cmake -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/konstantin/Documents/projects/univer/pl/CourseWork
+CMAKE_SOURCE_DIR = /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug
+CMAKE_BINARY_DIR = /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/CourseWork.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/CourseWork.dir/flags.make
 
 CMakeFiles/CourseWork.dir/main.cpp.o: CMakeFiles/CourseWork.dir/flags.make
 CMakeFiles/CourseWork.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CourseWork.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CourseWork.dir/main.cpp.o -c /home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CourseWork.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CourseWork.dir/main.cpp.o -c /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp
 
 CMakeFiles/CourseWork.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CourseWork.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp > CMakeFiles/CourseWork.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp > CMakeFiles/CourseWork.dir/main.cpp.i
 
 CMakeFiles/CourseWork.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CourseWork.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp -o CMakeFiles/CourseWork.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp -o CMakeFiles/CourseWork.dir/main.cpp.s
 
 CMakeFiles/CourseWork.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/CourseWork.dir/main.cpp.o.provides.build: CMakeFiles/CourseWork.dir/m
 
 CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o: CMakeFiles/CourseWork.dir/flags.make
 CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o: ../BasicFunc/basicFigures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o -c /home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o -c /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp
 
 CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp > CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp > CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.i
 
 CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp -o CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp -o CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.s
 
 CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o.requires:
 
@@ -122,7 +122,7 @@ CourseWork: /usr/lib/x86_64-linux-gnu/libglut.so
 CourseWork: /usr/lib/x86_64-linux-gnu/libXmu.so
 CourseWork: /usr/lib/x86_64-linux-gnu/libXi.so
 CourseWork: CMakeFiles/CourseWork.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CourseWork"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable CourseWork"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CourseWork.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -140,6 +140,6 @@ CMakeFiles/CourseWork.dir/clean:
 .PHONY : CMakeFiles/CourseWork.dir/clean
 
 CMakeFiles/CourseWork.dir/depend:
-	cd /home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/konstantin/Documents/projects/univer/pl/CourseWork /home/konstantin/Documents/projects/univer/pl/CourseWork /home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug /home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug /home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles/CourseWork.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug /home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/CourseWork.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/CourseWork.dir/depend
 

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp" "/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o"
-  "/home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp" "/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CMakeFiles/CourseWork.dir/main.cpp.o"
+  "/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp" "/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o"
+  "/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp" "/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/CourseWork.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug"/>
+				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug"/>
+				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug"/>
+				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CourseWork">
-				<Option output="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CourseWork" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug"/>
+				<Option output="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CourseWork" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 CourseWork"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 CourseWork"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="CourseWork/fast">
-				<Option output="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/CourseWork" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug"/>
+				<Option output="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CourseWork" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,23 +77,23 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 CourseWork/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CourseWork/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 CourseWork/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp">
+		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp">
 			<Option target="CourseWork"/>
 		</Unit>
-		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h">
+		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.h">
 			<Option target="CourseWork"/>
 		</Unit>
-		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp">
+		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp">
 			<Option target="CourseWork"/>
 		</Unit>
-		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CourseWork/CMakeLists.txt">
+		<Unit filename="/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

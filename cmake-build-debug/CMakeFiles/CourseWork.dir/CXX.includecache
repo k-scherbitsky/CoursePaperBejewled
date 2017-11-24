@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp
+/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.cpp
 GL/glut.h
 -
 cmath
@@ -14,15 +14,15 @@ cmath
 cstdio
 -
 basicFigures.h
-/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.h
 
-/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.h
 
-/home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp
+/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/main.cpp
 GL/glut.h
 -
 cstdio
 -
 BasicFunc/basicFigures.h
-/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/BasicFunc/basicFigures.h
 
