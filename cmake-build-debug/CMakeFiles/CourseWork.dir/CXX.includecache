@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.cpp
+GL/glut.h
+-
+cmath
+-
+cstdio
+-
+basicFigures.h
+/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+
+/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+
+/home/konstantin/Documents/projects/univer/pl/CourseWork/main.cpp
+GL/glut.h
+-
+cstdio
+-
+BasicFunc/basicFigures.h
+/home/konstantin/Documents/projects/univer/pl/CourseWork/BasicFunc/basicFigures.h
+
