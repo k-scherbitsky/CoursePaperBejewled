@@ -36,10 +36,9 @@ void draw() {
 
     glBindTexture(GL_TEXTURE_2D, texture[1]);
     setColorRGB(255, 255, 0);
-    glRotated(180,0,0,1);
+    glRotated(180, 0, 0, 1);
     glTranslated(0.05, 0.40, 0);
     drawFillRectangle(-0.35, 0.35, 0.35, -0.35, 0.01);
-
 
 
     glutSwapBuffers();
