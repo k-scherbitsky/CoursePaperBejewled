@@ -8,7 +8,7 @@
 void drawLine(double x0, double y0, double x, double y);
 
 void drawRegtangle(double x0, double y0, double x, double y);
-void drawFillRectangle(double x0, double y0, double x, double y);
+void drawFillRectangle(double x0, double y0, double x, double y, double z);
 void createTextureRectangle(double x0, double y0, double x, double y);
 
 void drawTriangle(double x0, double y0, double x1, double y1, double x2, double y2);
@@ -19,7 +19,7 @@ void drawEllipse(int slices, double x, double y);
 void drawFillEllipse(int slices, double x, double y);
 void createTextureTriangle(int slices, double x, double y);
 
-//GLuint LoadTexture(char *FileName);
+GLuint LoadTexture(char *FileName, int n);
 
 void setColorRGB(double red, double green, double blue);
 
