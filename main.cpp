@@ -1,21 +1,21 @@
 #include <GL/glut.h>
 #include <cstdio>
 #include "BasicFunc/basicFigures.h"
+#include "Figures/figures.h"
+#include <iostream>
 
-GLuint texture[8];
+using namespace std;
+int pos[8][8];
 
 void draw();
 
 
 int main(int args, char **argv) {
-    createWindow(args, argv, 550, 450);
+    createWindow(args, argv, 850, 750);
 
     glutDisplayFunc(draw);
     glutReshapeFunc(reshapeSize);
-    glutIdleFunc(draw);
-
-    texture[1] = LoadTexture((char *) "../resources/textures/Background.bmp", 0);
-    texture[2] = LoadTexture((char *) "../resources/textures/Blue.bmp", 1);
+//    glutIdleFunc(draw);
 
     glutMainLoop();
 
@@ -23,23 +23,77 @@ int main(int args, char **argv) {
 }
 
 void draw() {
+    srand(time(0));
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glLoadIdentity();
     gluLookAt(
             0, 0, 10,
             0, 0, 0,
             0, 1, 0);
-//    glRotatef(0, 0.0f, 0.0f, 1.0f);
-    glBindTexture(GL_TEXTURE_2D, texture[0]);
-    setColorRGB(255, 0, 255);
-    drawFillRectangle(-5, 4, 5, -4, 0.0);
+    setBackround();
 
-    glBindTexture(GL_TEXTURE_2D, texture[1]);
-    setColorRGB(255, 255, 0);
-    glRotated(180, 0, 0, 1);
-    glTranslated(0.05, 0.40, 0);
-    drawFillRectangle(-0.35, 0.35, 0.35, -0.35, 0.01);
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawBlueGem();
+            glPopMatrix();
+        }
+    }
 
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawBlueGem();
+            glPopMatrix();
+        }
+    }
+
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawGreenGem();
+            glPopMatrix();
+        }
+    }
+
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawOrangeGem();
+            glPopMatrix();
+        }
+    }
+
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawPurpleGem();
+            glPopMatrix();
+        }
+    }
+
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawRedGem();
+            glPopMatrix();
+        }
+    }
+
+    for (int i = -6; i < 2; i += rand() % 5) {
+        for (int j = 5; j > -3; j -= rand() % 5 ) {
+            glPushMatrix();
+            glTranslatef(i * 0.7, j * 0.7, 0);
+            drawYellowGem();
+            glPopMatrix();
+        }
+    }
 
     glutSwapBuffers();
 }
