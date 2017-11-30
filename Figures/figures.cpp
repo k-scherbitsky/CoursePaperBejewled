@@ -7,24 +7,25 @@
 #include "figures.h"
 #include "../BasicFunc/basicFigures.h"
 
-int drawBlueGem() {
-    
+int drawBlueGem(double x, double y) {
+    glTranslated(x, y, 0);
+
     glBegin(GL_POLYGON);
 
-    setColorRGB(176, 224, 230);
+    setColorRGBA(176, 224, 230, 100);
     glVertex3d(-0.25, 0.2, 0.1);
     glVertex3d(-0.2, 0.25, 0.1);
-    setColorRGB(0, 191, 255);
+    setColorRGBA(0, 191, 255, 100);
     glVertex3d(0.2, 0.25, 0.1);
     glVertex3d(0.25, 0.2, 0.1);
-    setColorRGB(0, 0, 128);
+    setColorRGBA(0, 0, 128, 100);
     glVertex3d(0, -0.2, 0.1);
 
     glEnd();
 
     //Border
     glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
+    setColorRGBA(0, 0, 0, 100);
     glBegin(GL_LINE_LOOP);
 
     glVertex3d(-0.25, 0.2, 0.1);
@@ -32,117 +33,118 @@ int drawBlueGem() {
     glVertex3d(0.2, 0.25, 0.1);
     glVertex3d(0.25, 0.2, 0.1);
     glVertex3d(0, -0.2, 0.1);
+
+    glEnd();
+    return 0;
+}
+
+int drawGreenGem(double x, double y) {
+    glTranslated(x, y, 0);
+
+    glBegin(GL_POLYGON);
+
+    setColorRGBA(0, 100, 0, 100);
+    glVertex3d(-0.25, 0.2, 0.1);
+    glVertex3d(-0.2, 0.25, 0.1);
+    glVertex3d(0.2, 0.25, 0.1);
+    glVertex3d(0.25, 0.2, 0.1);
+
+    setColorRGBA(144, 238, 144, 100);
+    glVertex3d(0.25, -0.2, 0.1);
+    glVertex3d(0.2, -0.25, 0.1);
+
+    setColorRGBA(0, 255, 127, 100);
+    glVertex3d(-0.2, -0.25, 0.1);
+    glVertex3d(-0.25, -0.2, 0.1);
+
+    glEnd();
+
+    //Border
+    glLineWidth(1.5);
+    setColorRGBA(0, 0, 0, 100);
+    glBegin(GL_LINE_LOOP);
+
+    glVertex3d(-0.25, 0.2, 0.1);
+    glVertex3d(-0.2, 0.25, 0.1);
+    glVertex3d(0.2, 0.25, 0.1);
+    glVertex3d(0.25, 0.2, 0.1);
+    glVertex3d(0.25, -0.2, 0.1);
+    glVertex3d(0.2, -0.25, 0.1);
+    glVertex3d(-0.2, -0.25, 0.1);
+    glVertex3d(-0.25, -0.2, 0.1);
 
     glEnd();
     return 1;
 }
 
-int drawGreenGem() {
-    
+int drawOrangeGem(double x, double y) {
+    glTranslated(x, y, 0);
 
-    glBegin(GL_POLYGON);
-
-    setColorRGB(0, 100, 0);
-    glVertex3d(-0.25, 0.2, 0.1);
-    glVertex3d(-0.2, 0.25, 0.1);
-    glVertex3d(0.2, 0.25, 0.1);
-    glVertex3d(0.25, 0.2, 0.1);
-
-    setColorRGB(144, 238, 144);
-    glVertex3d(0.25, -0.2, 0.1);
-    glVertex3d(0.2, -0.25, 0.1);
-
-    setColorRGB(0, 255, 127);
-    glVertex3d(-0.2, -0.25, 0.1);
-    glVertex3d(-0.25, -0.2, 0.1);
-
-    glEnd();
-
-    //Border
-    glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
-    glBegin(GL_LINE_LOOP);
-
-    glVertex3d(-0.25, 0.2, 0.1);
-    glVertex3d(-0.2, 0.25, 0.1);
-    glVertex3d(0.2, 0.25, 0.1);
-    glVertex3d(0.25, 0.2, 0.1);
-    glVertex3d(0.25, -0.2, 0.1);
-    glVertex3d(0.2, -0.25, 0.1);
-    glVertex3d(-0.2, -0.25, 0.1);
-    glVertex3d(-0.25, -0.2, 0.1);
-
-    glEnd();
-    return 2;
-}
-
-int drawOrangeGem() {
-    
-    setColorRGB(254, 224, 0);
+    setColorRGBA(254, 224, 0, 100);
     glBegin(GL_TRIANGLE_FAN);
     glVertex2d(0.0f, 0.0f);
     for (int i = 0; i <= 6; ++i) {
         double rad = i * 2 * M_PI / 6;
-        setColorRGB(245, 125, 0);
+        setColorRGBA(245, 125, 0, 100);
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
 
     //Border
     glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
+    setColorRGBA(0, 0, 0, 100);
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i <= 360; i++) {
         double rad = i * M_PI / 3;
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
-    return 3;
+    return 2;
 }
 
-int drawPurpleGem() {
-    
+int drawPurpleGem(double x, double y) {
+    glTranslated(x, y, 0);
 
-    setColorRGB(236, 183, 225);
+    setColorRGBA(236, 183, 225, 100);
     glBegin(GL_TRIANGLE_FAN);
     glVertex2d(0.0f, 0.0f);
     for (int i = 0; i <= 3; ++i) {
         double rad = i * 2 * M_PI / 3;
-        setColorRGB(128, 0, 128);
+        setColorRGBA(128, 0, 128, 100);
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
 
     //Border
     glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
+    setColorRGBA(0, 0, 0, 100);
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i <= 360; i++) {
         double rad = i * M_PI / 1.5;
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
-    return 4;
+    return 3;
 }
 
-int drawRedGem() {
-    
+int drawRedGem(double x, double y) {
+    glTranslated(x, y, 0);
 
     glBegin(GL_POLYGON);
 
-    setColorRGB(255, 0, 0);
+    setColorRGBA(255, 0, 0, 100);
     glVertex3d(-0.25, 0.225, 0.1);
     glVertex3d(-0.225, 0.25, 0.1);
 
-//    setColorRGB(32,178,170);
+//    setColorRGBA(32,178,170);
     glVertex3d(0.225, 0.25, 0.1);
     glVertex3d(0.25, 0.225, 0.1);
 
-    setColorRGB(255, 228, 225);
+    setColorRGBA(255, 228, 225, 100);
     glVertex3d(0.25, -0.225, 0.1);
     glVertex3d(0.225, -0.25, 0.1);
 
-    setColorRGB(240, 128, 128);
+    setColorRGBA(240, 128, 128, 100);
     glVertex3d(-0.225, -0.25, 0.1);
     glVertex3d(-0.25, -0.225, 0.1);
 
@@ -150,7 +152,7 @@ int drawRedGem() {
 
     //Border
     glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
+    setColorRGBA(0, 0, 0, 100);
     glBegin(GL_LINE_LOOP);
 
     glVertex3d(-0.25, 0.225, 0.1);
@@ -163,32 +165,30 @@ int drawRedGem() {
     glVertex3d(-0.25, -0.225, 0.1);
 
     glEnd();
-    return 5;
+    return 4;
 }
 
-int drawYellowGem() {
-    
+int drawYellowGem(double x, double y) {
+    glTranslated(x, y, 0);
 
-    setColorRGB(254, 254, 162);
+    setColorRGBA(254, 254, 162, 100);
     glBegin(GL_TRIANGLE_FAN);
     glVertex2d(0.0f, 0.0f);
     for (int i = 0; i <= 4; ++i) {
         double rad = i * 2 * M_PI / 4;
-        setColorRGB(255, 255, 0);
+        setColorRGBA(255, 255, 0, 100);
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
 
     //Border
     glLineWidth(1.5);
-    setColorRGB(0, 0, 0);
+    setColorRGBA(0, 0, 0, 100);
     glBegin(GL_LINE_LOOP);
     for (int i = 0; i <= 360; i++) {
         double rad = i * M_PI / 2;
         glVertex3d(cos(rad) * 0.25, sin(rad) * 0.25, 0.1);
     }
     glEnd();
-    return 6;
+    return 5;
 }
-
-

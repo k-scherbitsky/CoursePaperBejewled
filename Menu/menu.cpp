@@ -12,16 +12,14 @@ const char *exitGame = "Exit";
 const char *about = "About";
 
 void menu(bool isShowMenu) {
-    if(!isShowMenu)
+    if (!isShowMenu)
         return;
 
     drawWindowMenu();
-    setColorRGBA(240,230,140,100);
-    renderBitmapString(-1.5, 0.75, 0.3, GLUT_BITMAP_HELVETICA_18, newGame);
-    renderBitmapString(-1.5, 0.25, 0.3, GLUT_BITMAP_HELVETICA_18, score);
-    renderBitmapString(-1.5, -0.25, 0.3, GLUT_BITMAP_HELVETICA_18, exitGame);
-    renderBitmapString(-1.5, -0.75, 0.3, GLUT_BITMAP_HELVETICA_18, about);
-//    return true;
+    renderBitmapString(-1.5, 0.75, 0.3, GLUT_BITMAP_HELVETICA_18, newGame, 240, 230, 140);
+    renderBitmapString(-1.5, 0.25, 0.3, GLUT_BITMAP_HELVETICA_18, score, 240, 230, 140);
+    renderBitmapString(-1.5, -0.25, 0.3, GLUT_BITMAP_HELVETICA_18, exitGame, 240, 230, 140);
+    renderBitmapString(-1.5, -0.75, 0.3, GLUT_BITMAP_HELVETICA_18, about, 240, 230, 140);
 }
 
 void drawWindowMenu() {
