@@ -2,28 +2,28 @@
 #include <cstdio>
 #include "BasicFunc/basicFigures.h"
 #include "Figures/figures.h"
+#include "Menu/menu.h"
+#include "Constants/constChar.h"
 #include <iostream>
 
 using namespace std;
 int pos[8][8];
 double interval = 0.7;
-struct piece {
-    double x, y, col, row;
-} grid[10][10];
-
-enum gems {
-    blue = 1, green, orange, purple, red, yellow
-};
+bool isShowMenu = false;
 
 void draw();
 
+void drawCell();
+void cellFilling();
 
-void logic();
+void processNormalKeys(unsigned char key, int x, int y);
 
 int main(int args, char **argv) {
-    createWindow(args, argv, 850, 750);
+    createWindow(args, argv, 845, 700);
+    cellFilling();
     glutDisplayFunc(draw);
     glutReshapeFunc(reshapeSize);
+    glutKeyboardFunc(processNormalKeys);
 //    glutIdleFunc(draw);
 
     glutMainLoop();
@@ -39,19 +39,24 @@ void draw() {
             0, 0, 10,
             0, 0, 0,
             0, 1, 0);
-    setBackround();
-    logic();
+    setBackground();
+    drawCell();
+    menu(isShowMenu);
     glutSwapBuffers();
 }
 
-void logic() {
-    glTranslated(-4, -1.5, 0);
+void cellFilling(){
 
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             pos[i][j] = rand() % 6;
         }
     }
+
+}
+
+void drawCell() {
+    glTranslated(-4, -1.5, 0);
 
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
@@ -60,34 +65,48 @@ void logic() {
                     glPushMatrix();
                     drawBlueGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
                 case 1:
                     glPushMatrix();
                     drawGreenGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
                 case 2:
                     glPushMatrix();
                     drawOrangeGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
                 case 3:
                     glPushMatrix();
                     drawPurpleGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
                 case 4:
                     glPushMatrix();
                     drawRedGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
                 case 5:
                     glPushMatrix();
                     drawYellowGem(i * interval, j * interval);
                     glPopMatrix();
-                    continue;
+                    break;
+                default:break;
             }
 
         }
+    }
+}
+
+void processNormalKeys(unsigned char key, int x, int y) {
+    switch (key) {
+        case 27: {
+            cout << "pressed esc" << endl;
+            glutPostRedisplay();
+            isShowMenu = !isShowMenu;
+            cout << "=" << isShowMenu << endl << endl;
+            break;
+        }
+        default:break;
     }
 }
