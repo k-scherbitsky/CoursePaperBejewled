@@ -7,6 +7,8 @@
 #include "figures.h"
 #include "../BasicFunc/basicFigures.h"
 
+void partOfCursor(double x1, double x2, double y1, double y2);
+
 int drawBlueGem(double x, double y) {
     glTranslated(x, y, 0);
 
@@ -191,4 +193,25 @@ int drawYellowGem(double x, double y) {
     }
     glEnd();
     return 5;
+}
+
+int drawCursor(double x, double y) {
+    glTranslated(x, y, 0);
+
+    partOfCursor(-0.15, -0.35, 0.35, 0.15);
+    partOfCursor(0.15, 0.35, 0.35, 0.15);
+    partOfCursor(0.15, 0.35, -0.35, -0.15);
+    partOfCursor(-0.15, -0.35, -0.35, -0.15);
+
+    glTranslated(-x, -y, 0);
+    return 6;
+}
+
+void partOfCursor(double x1, double x2, double y1, double y2) {
+    setColorRGBA(176, 224, 230, 100);
+    glBegin(GL_POLYGON);
+    glVertex3d(x1, y1, 0.11);
+    glVertex3d(x2, y1, 0.11);
+    glVertex3d(x2, y2, 0.11);
+    glEnd();
 }
