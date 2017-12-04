@@ -11,7 +11,37 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25cd3c39-e425-432d-b4db-63bafed5cb08" name="Default" comment="Add LoadTexture" />
+    <list default="true" id="25cd3c39-e425-432d-b4db-63bafed5cb08" name="Default" comment="add constants">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Constants/constChar.h" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/CourseWork.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/BasicFunc/basicFigures.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Figures/figures.cpp" afterPath="$PROJECT_DIR$/Figures/figures.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Figures/figures.h" afterPath="$PROJECT_DIR$/Figures/figures.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/CXX.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/CXX.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/cmake_clean.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/link.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CourseWork.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CourseWork.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/CourseWork.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,61 +52,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="13" column="75" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+            <state relative-caret-position="208">
+              <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
+                <element signature="e#1006#1380#0" expanded="false" />
+                <element signature="e#1382#1528#0" expanded="false" />
+                <element signature="e#1530#2937#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Background.bmp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/textures/Background.bmp">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basicFigures.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-              <folding>
-                <element signature="e#45#65#0" expanded="true" />
-                <element signature="e#224#371#0" expanded="false" />
-                <element signature="e#892#1102#0" expanded="false" />
-                <element signature="e#1104#1302#0" expanded="false" />
-                <element signature="e#1580#1793#0" expanded="false" />
-                <element signature="e#1795#2017#0" expanded="false" />
-                <element signature="e#2019#2283#0" expanded="false" />
-                <element signature="e#2511#2770#0" expanded="false" />
-                <element signature="e#3109#4661#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basicFigures.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -85,20 +71,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>, 0.0</find>
-      <find>glVertex</find>
-      <find>TextureImage[0]</find>
-      <find>getTexture</find>
-      <find>glEnable(GL_TEXTURE_2D);</find>
-      <find>0</find>
-      <find>1</find>
+      <find>0.4</find>
+      <find>0.2,</find>
+      <find>2d</find>
+      <find>x0</find>
+      <find>y0</find>
+      <find>x</find>
+      <find>z</find>
+      <find>{</find>
+      <find>glEnd();</find>
+      <find>void</find>
+      <find>glTranslated(x, y, z);</find>
+      <find>cou</find>
+      <find>(double x, double y, double z)</find>
+      <find>posX, posY, 0</find>
+      <find>break</find>
+      <find>-=</find>
+      <find>() {</find>
+      <find>()</find>
+      <find>+= rand() % 5</find>
+      <find>&lt; 6</find>
+      <find>int j</find>
+      <find>+= rand() % 12</find>
+      <find>12</find>
+      <find>continue</find>
+      <find>2.5,</find>
+      <find>0.2</find>
+      <find>0.3</find>
+      <find>0.25</find>
+      <find>y</find>
+      <find>x, y, 0</find>
     </findStrings>
     <replaceStrings>
-      <replace>glTexCoord</replace>
-      <replace>getTexture[n]</replace>
-      <replace>getTexture[0]</replace>
-      <replace>n</replace>
+      <replace>h</replace>
+      <replace>3d</replace>
+      <replace>3</replace>
       <replace>0.2</replace>
+      <replace>0.225,</replace>
+      <replace>Gem(double z)</replace>
+      <replace>-5</replace>
+      <replace>5</replace>
+      <replace>0</replace>
+      <replace>(double z)</replace>
+      <replace>() { Translated(x,y,z);</replace>
+      <replace>(double x, double y, double z) {</replace>
+      <replace>(posX, posY, 0)</replace>
+      <replace>(double x, double y, double z)</replace>
+      <replace>int</replace>
+      <replace>()</replace>
+      <replace>continue</replace>
+      <replace>+=</replace>
+      <replace>(double x, double y)</replace>
+      <replace>&lt;= 8</replace>
+      <replace>&lt; 8`</replace>
+      <replace>j</replace>
+      <replace>++</replace>
+      <replace>break</replace>
+      <replace>1.25,</replace>
+      <replace>0.3</replace>
+      <replace>0.22</replace>
+      <replace>0.15</replace>
+      <replace>y, double z</replace>
+      <replace>x, y, z</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -109,9 +143,17 @@
       <list>
         <option value="$PROJECT_DIR$/basicFigure/basicFigures.cpp" />
         <option value="$PROJECT_DIR$/basicFigure/basicFigures.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/const.h" />
+        <option value="$PROJECT_DIR$/Constants/constChar.h" />
         <option value="$PROJECT_DIR$/BasicFunc/basicFigures.cpp" />
         <option value="$PROJECT_DIR$/BasicFunc/basicFigures.h" />
+        <option value="$PROJECT_DIR$/Menu/menu.h" />
+        <option value="$PROJECT_DIR$/Menu/menu.cpp" />
+        <option value="$PROJECT_DIR$/Score/score.h" />
+        <option value="$PROJECT_DIR$/Score/score.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/Figures/figures.h" />
+        <option value="$PROJECT_DIR$/Figures/figures.cpp" />
         <option value="$PROJECT_DIR$/main.cpp" />
       </list>
     </option>
@@ -124,10 +166,10 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1366" />
-    <option name="y" value="764" />
-    <option name="width" value="1366" />
-    <option name="height" value="772" />
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1368" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -152,17 +194,6 @@
               <item name="CourseWork" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CoursePaperBejeweled" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="CourseWork" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="CoursePaperBejeweled" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWork" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
-              <item name="CoursePaperBejeweled" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="textures" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -171,16 +202,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/cp-star_wars_game_cpp-master" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/textures" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Constants" />
       <recent name="$PROJECT_DIR$/resources/textures" />
       <recent name="$PROJECT_DIR$/BasicFunc" />
       <recent name="$PROJECT_DIR$/resourses/textures/png" />
       <recent name="$PROJECT_DIR$/resourses" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/textures" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -222,7 +255,23 @@
       <workItem from="1511424638568" duration="5302000" />
       <workItem from="1511464841628" duration="9246000" />
       <workItem from="1511476022027" duration="3064000" />
-      <workItem from="1511546210079" duration="14359000" />
+      <workItem from="1511546210079" duration="21376000" />
+      <workItem from="1511699534403" duration="19305000" />
+      <workItem from="1511732138853" duration="52000" />
+      <workItem from="1511732224231" duration="53000" />
+      <workItem from="1511732300150" duration="9406000" />
+      <workItem from="1511771902563" duration="48000" />
+      <workItem from="1511775338446" duration="11432000" />
+      <workItem from="1511906610433" duration="7316000" />
+      <workItem from="1511940332972" duration="1108000" />
+      <workItem from="1511941942830" duration="2416000" />
+      <workItem from="1511949639169" duration="2449000" />
+      <workItem from="1511957102359" duration="4544000" />
+      <workItem from="1511989994154" duration="3593000" />
+      <workItem from="1512069542856" duration="9912000" />
+      <workItem from="1512328753152" duration="8201000" />
+      <workItem from="1512408096273" duration="3460000" />
+      <workItem from="1512412728900" duration="9643000" />
     </task>
     <task id="LOCAL-00001" summary="Add LoadTexture">
       <created>1511551305402</created>
@@ -231,35 +280,155 @@
       <option name="project" value="LOCAL" />
       <updated>1511551305402</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="delete files">
+      <created>1511560987170</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1511560987170</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add gems">
+      <created>1511718221052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1511718221052</updated>
+    </task>
+    <task id="LOCAL-00004" summary="delete LoadTexture, draw gems">
+      <created>1511741956265</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1511741956265</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update figures.cpp">
+      <created>1511742055339</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1511742055339</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Field filling">
+      <created>1511908480782</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511908480782</updated>
+    </task>
+    <task id="LOCAL-00007" summary="create menu">
+      <created>1511997159597</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1511997159597</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add renderBitmapSrting">
+      <created>1512071533799</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1512071533800</updated>
+    </task>
+    <task id="LOCAL-00009" summary="update functions">
+      <created>1512071604810</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1512071604810</updated>
+    </task>
+    <task id="LOCAL-00010" summary="draw menu and cells">
+      <created>1512071656293</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1512071656293</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add cursor">
+      <created>1512343581411</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1512343581411</updated>
+    </task>
+    <task id="LOCAL-00012" summary="delete">
+      <created>1512344565882</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1512344565882</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add window &quot;about&quot;">
+      <created>1512421959967</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1512421959967</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add backgriund music, install keyboard">
+      <created>1512422100282</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1512422100282</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40928000" />
+    <option name="totallyTimeSpent" value="140883000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1366" y="764" width="1366" height="772" extended-state="6" />
+    <frame x="-1" y="-11" width="1368" height="780" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56696427" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1749634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32886904" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266564" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27272728" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.56548536" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17220543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39880952" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39753467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="SFDX" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3266564" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3127889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Execute Anonymous" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56548536" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17220543" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32819724" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Log Manager" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39753467" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Salesforce" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -269,43 +438,84 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add LoadTexture" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add LoadTexture" />
+    <MESSAGE value="delete files" />
+    <MESSAGE value="add gems" />
+    <MESSAGE value="delete LoadTexture, draw gems" />
+    <MESSAGE value="update figures.cpp" />
+    <MESSAGE value="Field filling" />
+    <MESSAGE value="create menu" />
+    <MESSAGE value="add renderBitmapSrting" />
+    <MESSAGE value="update functions" />
+    <MESSAGE value="draw menu and cells" />
+    <MESSAGE value="add cursor" />
+    <MESSAGE value="delete" />
+    <MESSAGE value="add window &quot;about&quot;" />
+    <MESSAGE value="add backgriund music, install keyboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="add backgriund music, install keyboard" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="75" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="75" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.cpp">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1920">
+          <caret line="128" column="0" lean-forward="false" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="75" lean-forward="false" selection-start-line="7" selection-start-column="75" selection-end-line="7" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="35" lean-forward="false" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp" />
+    <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.cpp">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#45#65#0" expanded="true" />
-            <element signature="e#224#371#0" expanded="false" />
-            <element signature="e#892#1102#0" expanded="false" />
-            <element signature="e#1104#1302#0" expanded="false" />
-            <element signature="e#1580#1793#0" expanded="false" />
-            <element signature="e#1795#2017#0" expanded="false" />
-            <element signature="e#2019#2283#0" expanded="false" />
-            <element signature="e#2511#2770#0" expanded="false" />
-            <element signature="e#3109#4661#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -313,7 +523,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -323,6 +532,9 @@
           <caret line="123" column="70" lean-forward="false" selection-start-line="123" selection-start-column="70" selection-end-line="123" selection-end-column="70" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -331,7 +543,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -339,30 +550,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#45#65#0" expanded="true" />
-            <element signature="e#224#371#0" expanded="false" />
-            <element signature="e#892#1102#0" expanded="false" />
-            <element signature="e#1104#1302#0" expanded="false" />
-            <element signature="e#1580#1793#0" expanded="false" />
-            <element signature="e#1795#2017#0" expanded="false" />
-            <element signature="e#2019#2283#0" expanded="false" />
-            <element signature="e#2511#2770#0" expanded="false" />
-            <element signature="e#3109#4661#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp" />
     <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -372,6 +567,9 @@
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -380,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -390,6 +587,9 @@
           <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -398,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="87" lean-forward="false" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -406,17 +605,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#45#65#0" expanded="true" />
-            <element signature="e#224#371#0" expanded="false" />
-            <element signature="e#892#1102#0" expanded="false" />
-            <element signature="e#1104#1302#0" expanded="false" />
-            <element signature="e#1580#1793#0" expanded="false" />
-            <element signature="e#1795#2017#0" expanded="false" />
-            <element signature="e#2019#2283#0" expanded="false" />
-            <element signature="e#2511#2770#0" expanded="false" />
-            <element signature="e#3109#4661#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -424,7 +612,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -434,31 +621,10 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Green.bmp" />
-    <entry file="file://$PROJECT_DIR$/resources/textures/Orange.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Purple.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Red.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file:///usr/include/GL/gl.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="1293" column="22" lean-forward="false" selection-start-line="1293" selection-start-column="22" selection-end-line="1293" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -469,74 +635,182 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/textures/background.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/png/Backdrop13.jpg" />
+    <entry file="file://$PROJECT_DIR$/SOIL.h" />
+    <entry file="file:///usr/include/SOIL/SOIL.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3281">
+          <caret line="365" column="3" lean-forward="true" selection-start-line="365" selection-start-column="3" selection-end-line="365" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/textures/png/хз что не так/Color-1.png" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/png/хз что не так/Blue.png" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Blue.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Green.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Orange.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Red.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Purple.bmp" />
+    <entry file="file://$PROJECT_DIR$/resources/textures/Background.bmp" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/GL/gl.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="878" column="22" lean-forward="false" selection-start-line="878" selection-start-column="22" selection-end-line="878" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/random">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constants/constChar.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="false" selection-start-line="7" selection-start-column="35" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/include/GL/freeglut_std.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6930">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="140">
+          <caret line="232" column="38" lean-forward="false" selection-start-line="232" selection-start-column="12" selection-end-line="232" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Score/score.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Score/score.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="69" lean-forward="false" selection-start-line="13" selection-start-column="69" selection-end-line="13" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Menu/menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Yellow.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Blue.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/background.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file:///usr/include/SFML/Audio/Music.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="47" column="21" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="21" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="75" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="13" selection-end-column="75" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="25" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/textures/Background.bmp">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        <state relative-caret-position="405">
+          <caret line="146" column="5" lean-forward="false" selection-start-line="146" selection-start-column="5" selection-end-line="146" selection-end-column="5" />
           <folding>
-            <element signature="e#45#65#0" expanded="true" />
-            <element signature="e#224#371#0" expanded="false" />
-            <element signature="e#892#1102#0" expanded="false" />
-            <element signature="e#1104#1302#0" expanded="false" />
-            <element signature="e#1580#1793#0" expanded="false" />
-            <element signature="e#1795#2017#0" expanded="false" />
-            <element signature="e#2019#2283#0" expanded="false" />
-            <element signature="e#2511#2770#0" expanded="false" />
-            <element signature="e#3109#4661#0" expanded="false" />
+            <element signature="e#172#230#1" expanded="false" />
+            <element signature="e#247#443#0" expanded="false" />
+            <element signature="e#445#668#0" expanded="false" />
+            <element signature="e#670#996#0" expanded="false" />
+            <element signature="e#998#1221#0" expanded="false" />
+            <element signature="e#1223#1488#0" expanded="false" />
+            <element signature="e#1490#1706#0" expanded="false" />
+            <element signature="e#1708#2003#0" expanded="false" />
+            <element signature="e#2005#2341#0" expanded="false" />
+            <element signature="e#2343#3894#0" expanded="false" />
+            <element signature="e#3896#4140#0" expanded="false" />
+            <element signature="e#4142#4464#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BasicFunc/basicFigures.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+        <state relative-caret-position="345">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/figures.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#208#877#0" expanded="false" />
+            <element signature="e#879#1759#0" expanded="false" />
+            <element signature="e#1761#2385#0" expanded="false" />
+            <element signature="e#2387#3015#0" expanded="false" />
+            <element signature="e#3017#3962#0" expanded="false" />
+            <element signature="e#3964#4590#0" expanded="false" />
+            <element signature="e#4592#4939#0" expanded="false" />
+            <element signature="e#4941#5172#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Figures/figures.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Menu/menu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="e#45#65#0" expanded="true" />
+            <element signature="e#403#860#0" expanded="false" />
+            <element signature="e#862#1656#0" expanded="false" />
+            <element signature="e#1658#2757#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        <state relative-caret-position="208">
+          <caret line="19" column="5" lean-forward="false" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+            <element signature="e#1006#1380#0" expanded="false" />
+            <element signature="e#1382#1528#0" expanded="false" />
+            <element signature="e#1530#2937#0" expanded="false" />
           </folding>
         </state>
       </provider>
