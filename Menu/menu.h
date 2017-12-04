@@ -7,6 +7,6 @@
 
 void menu(bool isShowMenu);
 void drawWindowMenu();
-//bool isShowMenu = false;
+void drawWindowAbout(bool isShowAbout) ;
 
 #endif //COURSEWORK_MENU_H
