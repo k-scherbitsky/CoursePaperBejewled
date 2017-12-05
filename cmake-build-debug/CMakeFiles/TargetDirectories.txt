@@ -1,3 +1,0 @@
-/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/konstantin/Documents/projects/univer/pl/CoursePaperBejeweled/cmake-build-debug/CMakeFiles/CourseWork.dir
