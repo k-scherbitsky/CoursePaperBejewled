@@ -8,6 +8,7 @@
 #include <SFML/Audio.hpp>
 
 using namespace std;
+
 int pos[8][8];
 double interval = 0.7;
 bool isShowMenu = true;
@@ -27,10 +28,8 @@ void processNormalKeys(unsigned char key, int x, int y);
 
 int main(int args, char **argv) {
     sf::Music music;
-    if (!music.openFromFile("../resources/music/background_music.ogg")) {
-        cout << "Music file not found!" << endl;
+    if (!music.openFromFile("../resources/music/background_music.ogg"))
         return -1;
-    }
     music.setVolume(10);
     music.play();
     music.setLoop(true);
@@ -67,7 +66,7 @@ void draw() {
 void cellFilling() {
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
-            pos[i][j] = rand() % 6;
+            pos[i][j] = rand() % 3;
         }
     }
 }
@@ -116,6 +115,26 @@ void drawCell() {
     glTranslated(4, 1.5, 0);
 }
 
+void matchFinding() {
+    for (int i = 0; i < 8; i++) {
+        for (int j = 0; j < 8; j++) {
+
+            if (pos[i][j] == pos[i + 1][j] && pos[i][j] == pos[i - 1][j]) {
+                pos[i][j] = pos[i][j + 1];
+                pos[i + 1][j] = pos[i + 1][j + 1];
+                pos[i - 1][j] = pos[i - 1][j + 1];
+            }
+            if (pos[i][j] == pos[i][j + 1] && pos[i][j] == pos[i][j - 1]) {
+                pos[i][j - 1] = pos[i][j + 4];
+                pos[i][j] = pos[i][j + 3];
+                pos[i][j + 1] = pos[i][j + 2];
+
+            }
+
+        }
+    }
+}
+
 void processNormalKeys(unsigned char key, int x, int y) {
     switch (key) {
         case 27: { // ESC
@@ -132,6 +151,12 @@ void processNormalKeys(unsigned char key, int x, int y) {
                 isShowAbout = false;
                 isMoveCursor = false;
             }
+            break;
+        }
+        case 32:{
+
+            matchFinding();
+
             break;
         }
         case 51: { // 3

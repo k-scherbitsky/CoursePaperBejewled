@@ -6,7 +6,7 @@
 #include <cmath>
 #include <cstdio>
 #include "basicFigures.h"
-#include "SOIL/SOIL.h"
+#include <iostream>
 
 GLuint textureID[8];
 struct {

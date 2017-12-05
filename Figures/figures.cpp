@@ -9,8 +9,8 @@
 
 void partOfCursor(double x1, double x2, double y1, double y2);
 
-int drawBlueGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawBlueGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     glBegin(GL_POLYGON);
 
@@ -40,8 +40,8 @@ int drawBlueGem(double x, double y) {
     return 0;
 }
 
-int drawGreenGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawGreenGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     glBegin(GL_POLYGON);
 
@@ -79,8 +79,8 @@ int drawGreenGem(double x, double y) {
     return 1;
 }
 
-int drawOrangeGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawOrangeGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     setColorRGBA(254, 224, 0, 100);
     glBegin(GL_TRIANGLE_FAN);
@@ -104,8 +104,8 @@ int drawOrangeGem(double x, double y) {
     return 2;
 }
 
-int drawPurpleGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawPurpleGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     setColorRGBA(236, 183, 225, 100);
     glBegin(GL_TRIANGLE_FAN);
@@ -129,8 +129,8 @@ int drawPurpleGem(double x, double y) {
     return 3;
 }
 
-int drawRedGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawRedGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     glBegin(GL_POLYGON);
 
@@ -170,8 +170,8 @@ int drawRedGem(double x, double y) {
     return 4;
 }
 
-int drawYellowGem(double x, double y) {
-    glTranslated(x, y, 0);
+int drawYellowGem(double x, double y, double z) {
+    glTranslated(x, y, z);
 
     setColorRGBA(254, 254, 162, 100);
     glBegin(GL_TRIANGLE_FAN);
@@ -195,7 +195,10 @@ int drawYellowGem(double x, double y) {
     return 5;
 }
 
-int drawCursor(double x, double y) {
+int drawCursor(double x, double y, bool isMoveCursor) {
+    if(!isMoveCursor)
+        return -1;
+
     glTranslated(x, y, 0);
 
     partOfCursor(-0.15, -0.35, 0.35, 0.15);
