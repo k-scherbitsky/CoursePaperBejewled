@@ -4,40 +4,34 @@
 
 #include <GL/glut.h>
 #include "menu.h"
-#include "../BasicFunc/basicFigures.h"
-
-const char *newGame = "New Game";
-const char *score = "Score";
-const char *exitGame = "Exit";
-const char *about = "About";
-const char *textAboutFirstLine = "Invented, painted, wrote the code - ";
-const char *textAboutSecondLine = "Konstantin Scherbitsky(kostya.em2@gmail.com)";
+#include "../BasicFunc/basicFunc.h"
+#include "../CONSTANTS.h"
 
 void menu(bool isShowMenu) {
     if (!isShowMenu)
         return;
 
     drawWindowMenu();
-    renderBitmapString(-1.5, 0.75, 0.22, GLUT_BITMAP_HELVETICA_18, newGame, 240, 230, 140);
-    renderBitmapString(-1.5, 0.25, 0.22, GLUT_BITMAP_HELVETICA_18, score, 240, 230, 140);
-    renderBitmapString(-1.5, -0.25, 0.22, GLUT_BITMAP_HELVETICA_18, exitGame, 240, 230, 140);
-    renderBitmapString(-1.5, -0.75, 0.22, GLUT_BITMAP_HELVETICA_18, about, 240, 230, 140);
+    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, NEW_GAME, 240, 230, 140);
+    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE, 240, 230, 140);
+    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME, 240, 230, 140);
+    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, ABOUT, 240, 230, 140);
 }
 
 void drawWindowMenu() {
     glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
     setColorRGBA(0, 0, 128, 95);
 
     glBegin(GL_POLYGON);
-    glVertex3d(-3, 1.5, 0.2);
-    glVertex3d(-2.5, 2, 0.2);
-    glVertex3d(2.5, 2, 0.2);
-    glVertex3d(3, 1.5, 0.2);
-    glVertex3d(3, -1.5, 0.2);
-    glVertex3d(2.5, -2, 0.2);
-    glVertex3d(-2.5, -2, 0.2);
-    glVertex3d(-3, -1.5, 0.2);
+    glVertex3d(3, 4, Z_AXIS_MENU);
+    glVertex3d(4, 3, Z_AXIS_MENU);
+    glVertex3d(10, 3, Z_AXIS_MENU);
+    glVertex3d(11, 4, Z_AXIS_MENU);
+    glVertex3d(11, 7, Z_AXIS_MENU);
+    glVertex3d(10, 8, Z_AXIS_MENU);
+    glVertex3d(4, 8, Z_AXIS_MENU);
+    glVertex3d(3, 7, Z_AXIS_MENU);
     glEnd();
 
     //Border
@@ -45,37 +39,37 @@ void drawWindowMenu() {
     setColorRGBA(0, 191, 255, 95);
 
     glBegin(GL_LINE_LOOP);
-    glVertex3d(-3, 1.5, 0.2);
-    glVertex3d(-2.5, 2, 0.2);
-    glVertex3d(2.5, 2, 0.2);
-    glVertex3d(3, 1.5, 0.2);
-    glVertex3d(3, -1.5, 0.2);
-    glVertex3d(2.5, -2, 0.2);
-    glVertex3d(-2.5, -2, 0.2);
-    glVertex3d(-3, -1.5, 0.2);
+    glVertex3d(3, 4, Z_AXIS_MENU);
+    glVertex3d(4, 3, Z_AXIS_MENU);
+    glVertex3d(10, 3, Z_AXIS_MENU);
+    glVertex3d(11, 4, Z_AXIS_MENU);
+    glVertex3d(11, 7, Z_AXIS_MENU);
+    glVertex3d(10, 8, Z_AXIS_MENU);
+    glVertex3d(4, 8, Z_AXIS_MENU);
+    glVertex3d(3, 7, Z_AXIS_MENU);
     glEnd();
 
     glDisable(GL_BLEND);
 }
 
 void drawWindowAbout(bool isShowAbout) {
-    if(!isShowAbout){
+    if (!isShowAbout) {
         return;
     }
 
-    setColorRGBA(240, 255, 255, 98);
+    setColorRGBA(176, 224, 230, 97);
     glEnable(GL_BLEND);
-    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 
     glBegin(GL_POLYGON);
-    glVertex3d(-1.5, 0.75, 0.3);
-    glVertex3d(-1.25, 1, 0.3);
-    glVertex3d(1.25, 1, 0.3);
-    glVertex3d(1.5, 0.75, 0.3);
-    glVertex3d(1.5, -0.75, 0.3);
-    glVertex3d(1.25, -1, 0.3);
-    glVertex3d(-1.25, -1, 0.3);
-    glVertex3d(-1.5, -0.75, 0.3);
+    glVertex3d(4, 4.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(4.5, 4, Z_AXIS_MENU_ITEM);
+    glVertex3d(9.5, 4, Z_AXIS_MENU_ITEM);
+    glVertex3d(10, 4.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(10, 6.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(9.5, 7, Z_AXIS_MENU_ITEM);
+    glVertex3d(4.5, 7, Z_AXIS_MENU_ITEM);
+    glVertex3d(4, 6.5, Z_AXIS_MENU_ITEM);
     glEnd();
 
     //Border
@@ -83,19 +77,19 @@ void drawWindowAbout(bool isShowAbout) {
     setColorRGBA(0, 191, 255, 95);
 
     glBegin(GL_LINE_LOOP);
-    glVertex3d(-1.5, 0.75, 0.3);
-    glVertex3d(-1.25, 1, 0.3);
-    glVertex3d(1.25, 1, 0.3);
-    glVertex3d(1.5, 0.75, 0.3);
-    glVertex3d(1.5, -0.75, 0.3);
-    glVertex3d(1.25, -1, 0.3);
-    glVertex3d(-1.25, -1, 0.3);
-    glVertex3d(-1.5, -0.75, 0.3);
+    glVertex3d(4, 4.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(4.5, 4, Z_AXIS_MENU_ITEM);
+    glVertex3d(9.5, 4, Z_AXIS_MENU_ITEM);
+    glVertex3d(10, 4.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(10, 6.5, Z_AXIS_MENU_ITEM);
+    glVertex3d(9.5, 7, Z_AXIS_MENU_ITEM);
+    glVertex3d(4.5, 7, Z_AXIS_MENU_ITEM);
+    glVertex3d(4, 6.5, Z_AXIS_MENU_ITEM);
     glEnd();
 
     glDisable(GL_BLEND);
 
-    renderBitmapString(-1.2, 0.15, 0.32, GLUT_BITMAP_HELVETICA_12, textAboutFirstLine, 105, 105, 105);
-    renderBitmapString(-1.45, 0.0, 0.32, GLUT_BITMAP_HELVETICA_12, textAboutSecondLine, 105, 105, 105);
+    renderBitmapString(4.5, 5.25, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_FIRST_LINE, 105, 105, 105);
+    renderBitmapString(4.15, 5.5, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_SECOND_LINE, 105, 105, 105);
 
 }

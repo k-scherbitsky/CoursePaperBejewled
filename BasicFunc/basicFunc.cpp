@@ -5,7 +5,8 @@
 #include <GL/glut.h>
 #include <cmath>
 #include <cstdio>
-#include "basicFigures.h"
+#include "basicFunc.h"
+#include "../CONSTANTS.h"
 #include <iostream>
 
 GLuint textureID[8];
@@ -14,64 +15,6 @@ struct {
     int H;
     unsigned char *Image;
 } getTexture[8];
-
-void drawRegtangle(double x0, double y0, double x, double y) {
-    glBegin(GL_LINE_LOOP);
-    glVertex2d(x0, y0);
-    glVertex2d(x, y0);
-    glVertex2d(x, y);
-    glVertex2d(x0, y);
-    glEnd();
-}
-
-void drawFillRectangle(double x0, double y0, double x, double y, double z) {
-    glBegin(GL_POLYGON);
-
-    glVertex3d(x0, y0, z);
-    glVertex3d(x, y0, z);
-
-    glVertex3d(x, y, z);
-    glVertex3d(x0, y, z);
-
-    glEnd();
-}
-
-void createTextureRectangle(double x0, double y0, double x, double y, double z) {
-    glBegin(GL_POLYGON);
-
-    glTexCoord2d(0, 0);
-    glVertex3d(x0, y0, z);
-
-    glTexCoord2d(1, 0);
-    glVertex3d(x, y0, z);
-
-    glTexCoord2d(1, 1);
-    glVertex3d(x, y, z);
-
-    glTexCoord2d(0, 1);
-    glVertex3d(x0, y, z);
-
-    glEnd();
-}
-
-void drawEllipse(int slices, double x, double y) {
-    glBegin(GL_LINE_LOOP);
-    for (int i = 0; i <= slices; i++) {
-        double rad = i * M_PI / 180;
-        glVertex2d(cos(rad) * x, sin(rad) * y);
-    }
-    glEnd();
-}
-
-void drawFillEllipse(int slices, double x, double y) {
-    glBegin(GL_TRIANGLE_FAN);
-    glVertex2d(0.0f, 0.0f);
-    for (int i = 0; i <= slices; ++i) {
-        double rad = i * 2 * M_PI / slices;
-        glVertex2d(sin(rad) * x, cos(rad) * y);
-    }
-    glEnd();
-}
 
 void setColorRGBA(double red, double green, double blue, double opacity) {
     double r = red / 255;
@@ -82,27 +25,7 @@ void setColorRGBA(double red, double green, double blue, double opacity) {
 }
 
 void reshapeSize(int w, int h) {
-    if (h == 0) {
-        h = 1;
-    }
-    double ratio = 1.0 * w / h;
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    glViewport(0, 0, w, h);
-    gluPerspective(45, ratio, 1, 1000);
-    glMatrixMode(GL_MODELVIEW);
-//    glutReshapeWindow(845, 700);
-}
-
-void createWindow(int args, char **argv, int w, int h) {
-    glutInit(&args, argv);
-    glutInitWindowPosition(100, 0);
-    glutInitWindowSize(w, h);
-    glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutCreateWindow("Bejeweled");
-    glClearColor(1, 1, 1, 0);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_TEXTURE_2D);
+    glutReshapeWindow(845, 700);
 }
 
 GLuint LoadTexture(char *FileName, int n) {
@@ -148,12 +71,12 @@ void setBackground() {
     glBegin(GL_POLYGON);
 
     setColorRGBA(244, 164, 96, 100);
-    glVertex3d(-5, 5, 0);
-    glVertex3d(5, 5, 0);
+    glVertex3d(0, 0, Z_AXIS_BACKGROUND);
+    glVertex3d(WINDOW_WIDTH / PREF_SCREEN_CROP_FACTOR, 0, Z_AXIS_BACKGROUND);
 
     setColorRGBA(192, 192, 192, 100);
-    glVertex3d(5, -5, 0);
-    glVertex3d(-5, -5, 0);
+    glVertex3d(WINDOW_WIDTH / PREF_SCREEN_CROP_FACTOR, WINDOW_HEIGHT / PREF_SCREEN_CROP_FACTOR, Z_AXIS_BACKGROUND);
+    glVertex3d(0, WINDOW_HEIGHT / PREF_SCREEN_CROP_FACTOR, Z_AXIS_BACKGROUND);
 
     glEnd();
 }
@@ -167,6 +90,3 @@ void renderBitmapString(float x, float y, float z, void *font, const char *strin
         glutBitmapCharacter(font, *c);
     }
 }
-
-
-
