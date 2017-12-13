@@ -4,8 +4,8 @@
 
 #include <GL/glut.h>
 #include <cmath>
-#include "figures.h"
-#include "../BasicFunc/basicFunc.h"
+#include "Figures.h"
+#include "../BasicFunc/BasicFunc.h"
 #include "../CONSTANTS.h"
 
 void partOfCursor(double x1, double x2, double y1, double y2);

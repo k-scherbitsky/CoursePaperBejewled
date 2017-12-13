@@ -4,6 +4,11 @@
 
 #ifndef COURSEWORK_CONSTINT_H
 #define COURSEWORK_CONSTINT_H
+#include <iostream>
+
+const int INTERVAL = 1;
+const std::string MUSIC_PATH = "../res/music/";
+const std::string SOUND_PATH = "../res/sound/";
 
 //window
 const int PREF_SCREEN_CROP_FACTOR = 60;

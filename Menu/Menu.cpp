@@ -3,8 +3,8 @@
 //
 
 #include <GL/glut.h>
-#include "menu.h"
-#include "../BasicFunc/basicFunc.h"
+#include "Menu.h"
+#include "../BasicFunc/BasicFunc.h"
 #include "../CONSTANTS.h"
 
 void menu(bool isShowMenu) {

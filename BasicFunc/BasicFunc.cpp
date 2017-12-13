@@ -5,16 +5,13 @@
 #include <GL/glut.h>
 #include <cmath>
 #include <cstdio>
-#include "basicFunc.h"
+#include "BasicFunc.h"
 #include "../CONSTANTS.h"
+#include "../Structs.h"
 #include <iostream>
 
 GLuint textureID[8];
-struct {
-    int W;
-    int H;
-    unsigned char *Image;
-} getTexture[8];
+Texture getTexture[8];
 
 void setColorRGBA(double red, double green, double blue, double opacity) {
     double r = red / 255;
@@ -89,4 +86,8 @@ void renderBitmapString(float x, float y, float z, void *font, const char *strin
     for (c = string; *c != '\0'; c++) {
         glutBitmapCharacter(font, *c);
     }
+}
+
+bool isGameField(int xCoord, int yCoord){
+    return (0 < xCoord && xCoord < 9) && (0 < yCoord && yCoord < 9);
 }

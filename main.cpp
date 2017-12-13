@@ -1,40 +1,23 @@
 #include <GL/glut.h>
 #include <cstdio>
-#include "BasicFunc/basicFunc.h"
-#include "Figures/figures.h"
-#include "Menu/menu.h"
-#include "Score/score.h"
+#include "BasicFunc/BasicFunc.h"
+#include "Figures/Figures.h"
+#include "Menu/Menu.h"
+#include "Score/Score.h"
 #include "CONSTANTS.h"
+#include "Structs.h"
+#include "Music/Music.h"
 #include <iostream>
 #include <SFML/Audio.hpp>
 
 using namespace std;
 
-struct piece {
-    int pos;
-    int cell;
-    int x;
-    int y;
-    int col;
-    int row;
-    int match;
-    double alpha = 100;
-} grid[10][10];
+Piece grid[10][10];
+Cursor gemCursor = {1, 1};
+Cursor gemSwapCursor;
+Visibility objectVisible;
 
-double interval = 1;
 double zGem = 0.0;
-int xCursor = 1;
-int yCursor = 1;
-int xSwap;
-int ySwap;
-sf::Music music;
-
-bool isShowMenu = true;
-bool isShowAbout = false;
-bool isMoveCursor = false;
-bool isDrawGrid = false;
-bool isSwap = false;
-bool isMoving = false;
 
 void drawGrid();
 
@@ -46,7 +29,7 @@ void cellFilling();
 
 void matchFinding();
 
-void swap(piece p1, piece p2);
+void swap(Piece p1, Piece p2);
 
 void drawCell(int x, int y);
 
@@ -54,14 +37,12 @@ void processNormalKeys(unsigned char key, int x, int y);
 
 void processSpecialKeys(int key, int xx, int yy);
 
-void mouseButton(int button, int state, int x, int y);
+void processMouseClick(int button, int state, int x, int y);
 
 int main(int args, char **argv) {
-    if (!music.openFromFile("../resources/music/background_music.ogg"))
-        return -1;
-    music.setVolume(100);
-//    music.play();
-    music.setLoop(true);
+
+    playMusic(START_WINDOW);
+    sndInit();
 
     glutInit(&args, argv);
 
@@ -94,8 +75,12 @@ int main(int args, char **argv) {
 
     // регистрация клавиатуры и мыши
     glutKeyboardFunc(processNormalKeys);
+
     glutSpecialFunc(processSpecialKeys);
-    glutMouseFunc(mouseButton);
+
+    glutMouseFunc(processMouseClick);
+//    glutMotionFunc(processMouseMove);
+//    glutPassiveMotionFunc(processMouseMove);
 
     glutMainLoop();
 
@@ -113,23 +98,23 @@ void draw() {
     setBackground();
     drawGrid();
     drawCell();
-    drawCursorGem(xCursor, yCursor, isMoveCursor);
-    menu(isShowMenu);
+    drawCursorGem(gemCursor.xCursor, gemCursor.yCursor, objectVisible.isMoveCursor);
+    menu(objectVisible.isShowMenu);
     scoreGame();
     matchFinding();
-    drawWindowAbout(isShowAbout);
+    drawWindowAbout(objectVisible.isShowAbout);
     glutSwapBuffers();
 }
 
-void cellFilling() {
+void cellFilling()  {
     srand(time(0));
     for (int i = 1; i < 9; i++) {
         for (int j = 1; j < 9; j++) {
             grid[i][j].pos = rand() % 6;
             grid[i][j].row = i;
             grid[i][j].col = j;
-            grid[i][j].x = i * interval;
-            grid[i][j].y = j * interval;
+            grid[i][j].x = i * INTERVAL;
+            grid[i][j].y = j * INTERVAL;
         }
     }
 }
@@ -147,41 +132,47 @@ void matchFinding() {
     for (int i = 1; i < 9; i++) {
         for (int j = 1; j < 9; j++) {
             if (grid[i][j].pos == grid[i + 1][j].pos and grid[i][j].pos == grid[i - 1][j].pos)
-                for (int n = -1; n <= 1; n++) grid[i + n][j].match++;
+                for (int n = -1; n <= 1; n++){
+                    grid[i + n][j].match++;
+                    sndMatch();
+                }
 
             if (grid[i][j].pos == grid[i][j + 1].pos and grid[i][j].pos == grid[i][j - 1].pos)
-                for (int n = -1; n <= 1; n++) grid[i][j + n].match++;
+                for (int n = -1; n <= 1; n++) {
+                    grid[i][j + n].match++;
+                    sndMatch();
+                }
         }
     }
 
-    isMoving = false;
+    objectVisible.isMoving = false;
     for (int i = 1; i < 9; i++) {
         for (int j = 1; j < 9; j++) {
-            piece &p = grid[i][j];
+            Piece &p = grid[i][j];
             int dx, dy;
-            dx = p.x - p.row * interval;
-            dy = p.y - p.col * interval;
+            dx = p.x - p.row * INTERVAL;
+            dy = p.y - p.col * INTERVAL;
             if (dx) p.x -= dx / abs(dx);
             if (dy) p.y -= dy / abs(dy);
 
-            if (dx || dy) isMoving = 1;
+            if (dx || dy) objectVisible.isMoving = 1;
         }
     }
 
-    if (!isMoving)
+    if (!objectVisible.isMoving)
         for (int i = 1; i < 9; i++) {
             for (int j = 1; j < 9; j++) {
                 if (grid[i][j].match)
                     if (grid[i][j].alpha > 10) {
                         grid[i][j].alpha -= 10;
-                        isMoving = true;
+                        objectVisible.isMoving = true;
                     }
             }
         }
 
 
     //Обновление сетки
-    if (!isMoving) {
+    if (!objectVisible.isMoving) {
         for (int i = 8; i > 0; i--)
             for (int j = 1; j < 9; j++)
                 if (grid[i][j].match)
@@ -197,8 +188,8 @@ void matchFinding() {
                     grid[i][j].pos = rand() % 6;
                     grid[i][j].row = i;
                     grid[i][j].col = j;
-                    grid[i][j].x = i * interval;
-                    grid[i][j].y = j * interval;
+                    grid[i][j].x = i * INTERVAL;
+                    grid[i][j].y = j * INTERVAL;
                     grid[i][j].match = 0;
                     grid[i][j].alpha = 255;
                 }
@@ -206,7 +197,7 @@ void matchFinding() {
 
 }
 
-void swap(piece p1, piece p2) {
+void swap(Piece p1, Piece p2) {
     std::swap(p1.col, p2.col);
     std::swap(p1.row, p2.row);
 
@@ -221,7 +212,7 @@ void swap(piece p1, piece p2) {
 }
 
 void drawGrid() {
-    if (!isDrawGrid)
+    if (!objectVisible.isDrawGrid)
         return;
 
     for (double i = 0; i < WINDOW_WIDTH; i += 1) {
@@ -287,55 +278,52 @@ void drawCell(int x, int y) {
 void processNormalKeys(unsigned char key, int x, int y) {
     switch (key) {
         case 27: { // ESC
-            if (!isShowMenu) {
-                isShowMenu = true;
-                isMoveCursor = false;
+            if (!objectVisible.isShowMenu) {
+                objectVisible.isShowMenu = true;
+                objectVisible.isMoveCursor = false;
             } else {
-                isShowMenu = false;
-                isMoveCursor = true;
+                objectVisible.isShowMenu = false;
+                objectVisible.isMoveCursor = true;
             }
 
-            if (isShowAbout) {
-                isShowMenu = true;
-                isShowAbout = false;
-                isMoveCursor = false;
+            if (objectVisible.isShowAbout) {
+                objectVisible.isShowMenu = true;
+                objectVisible.isShowAbout = false;
+                objectVisible.isMoveCursor = false;
             }
             break;
         }
         case 32: { // space
-            if (!isShowMenu) {
-                isSwap = !isSwap;
-                xSwap = xCursor;
-                ySwap = yCursor;
-                cout << "isSwap: " << isSwap << endl << endl;
+            if (!objectVisible.isShowMenu) {
+                objectVisible.isSwap = !objectVisible.isSwap;
+                gemSwapCursor.xCursor = gemCursor.xCursor;
+                gemSwapCursor.yCursor = gemCursor.yCursor;
+                cout << "objectVisible.isSwap: " << objectVisible.isSwap << endl << endl;
             }
             break;
         }
         case 51: { // 3
-            if (!isShowMenu)
+            if (!objectVisible.isShowMenu)
                 break;
             else
                 exit(0);
         }
         case 52: { // 4
-            if (isShowMenu) {
-                if (!isShowAbout) {
-                    isShowAbout = true;
-                    isMoveCursor = false;
+            if (objectVisible.isShowMenu) {
+                if (!objectVisible.isShowAbout) {
+                    objectVisible.isShowAbout = true;
+                    objectVisible.isMoveCursor = false;
                 } else {
-                    isShowAbout = false;
-                    isMoveCursor = false;
+                    objectVisible.isShowAbout = false;
+                    objectVisible.isMoveCursor = false;
                 }
             }
             break;
         }
         case 71: // G(g)
         case 103:
-            isDrawGrid = !isDrawGrid;
+            objectVisible.isDrawGrid = !objectVisible.isDrawGrid;
             break;
-        case 77: // m
-        case 109:
-            music.play();
             break;
         case 78: // n
         case 110:
@@ -349,50 +337,50 @@ void processNormalKeys(unsigned char key, int x, int y) {
 void processSpecialKeys(int key, int xx, int yy) {
     switch (key) {
         case GLUT_KEY_UP: {
-            if (!isShowMenu) {
-                yCursor -= interval;
-                if (yCursor < 1)
-                    yCursor = 8;
+            if (!objectVisible.isShowMenu) {
+                gemCursor.yCursor -= INTERVAL;
+                if (gemCursor.yCursor < 1)
+                    gemCursor.yCursor = 8;
             }
-            if (isSwap) {
-                std::swap(grid[xCursor][yCursor].pos, grid[xSwap][ySwap].pos);
-                isSwap = false;
+            if (objectVisible.isSwap) {
+                std::swap(grid[gemCursor.xCursor][gemCursor.yCursor].pos, grid[gemSwapCursor.xCursor][gemSwapCursor.yCursor].pos);
+                objectVisible.isSwap = false;
             }
             break;
         }
         case GLUT_KEY_DOWN: {
-            if (!isShowMenu) {
-                yCursor += interval;
-                if (yCursor > 8)
-                    yCursor = 1;
+            if (!objectVisible.isShowMenu) {
+                gemCursor.yCursor += INTERVAL;
+                if (gemCursor.yCursor > 8)
+                    gemCursor.yCursor = 1;
             }
-            if (isSwap) {
-                std::swap(grid[xCursor][yCursor].pos, grid[xSwap][ySwap].pos);
-                isSwap = false;
+            if (objectVisible.isSwap) {
+                std::swap(grid[gemCursor.xCursor][gemCursor.yCursor].pos, grid[gemSwapCursor.xCursor][gemSwapCursor.yCursor].pos);
+                objectVisible.isSwap = false;
             }
             break;
         }
         case GLUT_KEY_LEFT: {
-            if (!isShowMenu) {
-                xCursor -= interval;
-                if (xCursor < 1)
-                    xCursor = 8;
+            if (!objectVisible.isShowMenu) {
+                gemCursor.xCursor -= INTERVAL;
+                if (gemCursor.xCursor < 1)
+                    gemCursor.xCursor = 8;
             }
-            if (isSwap) {
-                std::swap(grid[xCursor][yCursor].pos, grid[xSwap][ySwap].pos);
-                isSwap = false;
+            if (objectVisible.isSwap) {
+                std::swap(grid[gemCursor.xCursor][gemCursor.yCursor].pos, grid[gemSwapCursor.xCursor][gemSwapCursor.yCursor].pos);
+                objectVisible.isSwap = false;
             }
             break;
         }
         case GLUT_KEY_RIGHT: {
-            if (!isShowMenu) {
-                xCursor += interval;
-                if (xCursor > 8)
-                    xCursor = 1;
+            if (!objectVisible.isShowMenu) {
+                gemCursor.xCursor += INTERVAL;
+                if (gemCursor.xCursor > 8)
+                    gemCursor.xCursor = 1;
             }
-            if (isSwap) {
-                std::swap(grid[xCursor][yCursor].pos, grid[xSwap][ySwap].pos);
-                isSwap = false;
+            if (objectVisible.isSwap) {
+                std::swap(grid[gemCursor.xCursor][gemCursor.yCursor].pos, grid[gemSwapCursor.xCursor][gemSwapCursor.yCursor].pos);
+                objectVisible.isSwap = false;
             }
             break;
         }
@@ -402,32 +390,32 @@ void processSpecialKeys(int key, int xx, int yy) {
 
 }
 
-void mouseButton(int button, int state, int x, int y) {
+void processMouseClick(int button, int state, int x, int y) {
     y = y / PREF_SCREEN_CROP_FACTOR;
     x = x / PREF_SCREEN_CROP_FACTOR;
     bool isMenuField = (2 < x && x < 11) && (2 < y && y < 9);
-    bool isGameField = (0 < x && x < 9) && (0 < y && y < 9);
     switch (button) {
         case GLUT_LEFT_BUTTON:
+            sndSelect();
 //            cout << x << " " << y << endl << xCursor << " " << yCursor << endl << endl;;
-            if (!isShowMenu && isGameField) {
-                xSwap = xCursor = x;
-                ySwap = yCursor = y;
-                isSwap = true;
-                cout << "isSwap " << isSwap << endl;
+            if (!objectVisible.isShowMenu && isGameField(x, y)) {
+                gemSwapCursor.xCursor = gemCursor.xCursor = x;
+                gemSwapCursor.yCursor = gemCursor.yCursor = y;
+                objectVisible.isSwap = true;
+                cout << "objectVisible.isSwap " << objectVisible.isSwap << endl;
             }
-            if (isShowMenu && !isMenuField) {
-                isShowMenu = false;
-                isShowAbout = false;
-                isMoveCursor = true;
+            if (objectVisible.isShowMenu && !isMenuField) {
+                objectVisible.isShowMenu = false;
+                objectVisible.isShowAbout = false;
+                objectVisible.isMoveCursor = true;
             }
             break;
         case GLUT_RIGHT_BUTTON:
-            if (!isShowMenu && isGameField && isSwap) {
-                swap(grid[xSwap][ySwap], grid[x][y]);
-                xCursor = x;
-                yCursor = y;
-                isSwap = false;
+            if (!objectVisible.isShowMenu && isGameField(x, y) && objectVisible.isSwap) {
+                swap(grid[gemSwapCursor.yCursor][gemSwapCursor.yCursor], grid[x][y]);
+                gemCursor.xCursor = x;
+                gemCursor.yCursor = y;
+                objectVisible.isSwap = false;
             }
             break;
         default:

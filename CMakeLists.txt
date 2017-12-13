@@ -5,15 +5,15 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCE_FILES
         main.cpp
-        BasicFunc/basicFunc.cpp
-        BasicFunc/basicFunc.h
-        Figures/figures.cpp
-        Figures/figures.h
-        Menu/menu.cpp
-        Menu/menu.h
-        Score/score.cpp
-        Score/score.h
-        CONSTANTS.h)
+        BasicFunc/BasicFunc.cpp
+        BasicFunc/BasicFunc.h
+        Figures/Figures.cpp
+        Figures/Figures.h
+        Menu/Menu.cpp
+        Menu/Menu.h
+        Score/Score.cpp
+        Score/Score.h
+        CONSTANTS.h Structs.h Music/Music.cpp Music/Music.h Music/Music.cpp Music/Music.h)
 
 add_executable(CourseWork ${SOURCE_FILES})
 

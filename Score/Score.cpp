@@ -3,8 +3,8 @@
 //
 
 #include <GL/glut.h>
-#include "score.h"
-#include "../BasicFunc/basicFunc.h"
+#include "Score.h"
+#include "../BasicFunc/BasicFunc.h"
 
 const char *scoreText = "Score: 0";
 const char *timeText = "Time: 00:00";
