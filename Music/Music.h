@@ -8,9 +8,12 @@
 #include <SFML/Audio/Music.hpp>
 #include "../Structs.h"
 
-void playMusic(StateGame state);
 void sndInit();
 void sndSelect();
 void sndMatch();
+
+void musicStartWindow(MusicState state);
+void musicPauseWindow(MusicState state);
+void musicGameField(MusicState state);
 
 #endif //COURSEWORK_MUSIC_H

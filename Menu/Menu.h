@@ -5,8 +5,9 @@
 #ifndef COURSEWORK_MENU_H
 #define COURSEWORK_MENU_H
 
-void menu(bool isShowMenu);
+void mainMenu(bool isShowMenu);
 void drawWindowMenu();
-void drawWindowAbout(bool isShowAbout) ;
+void drawWindowAbout(bool isShowAbout);
+void pauseMenu(bool isShowPauseMenu);
 
 #endif //COURSEWORK_MENU_H

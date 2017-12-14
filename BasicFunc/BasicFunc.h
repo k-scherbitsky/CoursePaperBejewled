@@ -5,13 +5,17 @@
 #ifndef COURSEWORK_BASICFIGURES_H
 #define COURSEWORK_BASICFIGURES_H
 
-GLuint LoadTexture(char *FileName, int n);
+#include "../Structs.h"
+#include <iostream>
+
+GLuint loadTexture(std::string fileName);
 
 void setColorRGBA(double red, double green, double blue, double opacity);
 
 void reshapeSize(int w, int h);
 
 void setBackground();
+
 void renderBitmapString(float x, float y, float z, void *font, const char *string,
                         double red, double green, double blue);
 

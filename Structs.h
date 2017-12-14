@@ -4,10 +4,21 @@
 
 #ifndef COURSEWORK_STRUCTS_H
 #define COURSEWORK_STRUCTS_H
+#include <GL/glut.h>
+
 
 enum StateGame {
-    START_WINDOW, GAME_WINDOW, PAUSE_WINDOW
+    START_WINDOW, GAME_FIELD, PAUSE_WINDOW
 };
+
+enum MusicState {
+    PLAY, PAUSE, STOP
+};
+
+struct Texture{
+    GLuint textureGem[6];
+    GLuint textureBgk[3];
+} ;
 
 struct Piece {
     int pos;
@@ -20,24 +31,28 @@ struct Piece {
     double alpha = 100;
 };
 
-struct Texture {
-    int W;
-    int H;
-    unsigned char *Image;
-};
-
 struct Cursor {
     int xCursor = 1;
     int yCursor = 1;
 };
 
-struct Visibility {
+struct TextColor{
+    int R;
+    int G;
+    int B;
+};
+
+struct ObjectVisibility {
     bool isShowMenu = true;
     bool isShowAbout = false;
     bool isMoveCursor = false;
     bool isDrawGrid = false;
     bool isSwap = false;
     bool isMoving = false;
+    bool isGameField = false;
+    bool isShowScore = false;
+    bool isShowPauseMenu = false;
+    bool isShowScoreWindow = false;
 };
 
 #endif //COURSEWORK_STRUCTS_H

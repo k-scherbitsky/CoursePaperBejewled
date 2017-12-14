@@ -30,6 +30,8 @@ struct SW_Sound {
     sf::Sound sound;
 };
 
+void musicState(sf::Music &playList, MusicState state);
+
 SW_Sound choose;
 SW_Sound match;
 
@@ -39,6 +41,59 @@ bool loadMusic(sf::Music &music, const std::string &filename) {
         return false;
     } else
         return true;
+}
+void musicStartWindow(MusicState state){
+    srand(time(0));
+    int randStartWindow = rand() % 4;
+    int nameMusic = 1;
+    for (int i = 0; i < 4; ++i) {
+        loadMusic(playListStartWindow[i], startWindowState + std::to_string(nameMusic++) + ".ogg");
+    }
+    playListStartWindow[randStartWindow].setVolume(10);
+    musicState(playListStartWindow[randStartWindow], state);
+    playListStartWindow[randStartWindow].setLoop(true);
+}
+
+void musicPauseWindow(MusicState state){
+    srand(time(0));
+    int nameMusic = 1;
+    int randPauseWindow = rand() % 3;
+
+    for (int i = 0; i < 3; ++i) {
+        loadMusic(playListPauseWindow[i], pauseWindowState + std::to_string(nameMusic++) + ".ogg");
+    }
+    playListPauseWindow[randPauseWindow].setVolume(10);
+    musicState(playListStartWindow[randPauseWindow], state);
+    playListPauseWindow[randPauseWindow].setLoop(true);
+}
+
+void musicGameField(MusicState state){
+    srand(time(0));
+    int nameMusic = 1;
+    int randGameField = rand() % 5;
+
+    for (int i = 0; i < 5; ++i) {
+        loadMusic(playListGameWindow[i], gameState + std::to_string(nameMusic++) + ".ogg");
+    }
+    playListGameWindow[randGameField].setVolume(10);
+    musicState(playListStartWindow[randGameField], state);
+    playListGameWindow[randGameField].setLoop(true);
+}
+
+void musicState(sf::Music &playList, MusicState state) {
+    switch (state){
+        case PLAY:
+            playList.play();
+            break;
+        case PAUSE:
+            playList.pause();
+            break;
+        case STOP:
+            playList.stop();
+            break;
+        default:
+            break;
+    }
 }
 
 bool loadSound(sf::SoundBuffer &buffer, sf::Sound &sound, const std::string &filename) {
@@ -59,43 +114,6 @@ void sndInit() {
 
     if (!success) {
         throw std::invalid_argument("could not open some sound files");
-    }
-}
-
-void playMusic(StateGame state) {
-    srand(time(0));
-    int nameMusic = 1;
-    switch (state) {
-        case START_WINDOW: {
-            int num = rand() % 4;
-            for (int i = 0; i < 4; ++i) {
-                loadMusic(playListStartWindow[i], startWindowState + std::to_string(nameMusic++) + ".ogg");
-            }
-            playListStartWindow[num].setVolume(10);
-            playListStartWindow[num].play();
-            playListStartWindow[num].setLoop(true);
-            break;
-        }
-        case GAME_WINDOW: {
-            int num = rand() % 5;
-            for (int i = 0; i < 5; ++i) {
-                loadMusic(playListGameWindow[i], gameState + std::to_string(nameMusic++) + ".ogg");
-            }
-            playListGameWindow[num].setVolume(10);
-            playListGameWindow[num].play();
-            playListGameWindow[num].setLoop(true);
-            break;
-        }
-        case PAUSE_WINDOW: {
-            int num = rand() % 3;
-            for (int i = 0; i < 3; ++i) {
-                loadMusic(playListPauseWindow[i], pauseWindowState + std::to_string(nameMusic++) + ".ogg");
-            }
-            playListPauseWindow[num].setVolume(10);
-            playListPauseWindow[num].play();
-            playListPauseWindow[num].setLoop(true);
-            break;
-        }
     }
 }
 

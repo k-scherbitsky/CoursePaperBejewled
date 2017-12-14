@@ -13,11 +13,7 @@ void partOfCursor(double x1, double x2, double y1, double y2);
 int drawBlueGem(double x, double y, double z, double alpha) {
     glTranslated(x, y, z);
 
-    glEnable(GL_BLEND);
-
-
     glBegin(GL_POLYGON);
-
     setColorRGBA(176, 224, 230, alpha);
     glVertex3d(0.125, 0.25, Z_AXIS_GEMS);
     glVertex3d(0.375, 0.125, Z_AXIS_GEMS);
@@ -43,7 +39,6 @@ int drawBlueGem(double x, double y, double z, double alpha) {
     glVertex3d(0.5, 0.875, Z_AXIS_GEMS);
 
     glEnd();
-    glDisable(GL_BLEND);
 
     return 0;
 }

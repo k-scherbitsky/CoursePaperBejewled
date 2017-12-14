@@ -4,6 +4,7 @@
 
 #ifndef COURSEWORK_SCORE_H
 #define COURSEWORK_SCORE_H
-void scoreGame();
+void scoreGame(bool isShowScore);
+void menuScoreWindow(bool isShowScoreWindow);
 
 #endif //COURSEWORK_SCORE_H

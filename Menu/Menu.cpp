@@ -7,21 +7,42 @@
 #include "../BasicFunc/BasicFunc.h"
 #include "../CONSTANTS.h"
 
-void menu(bool isShowMenu) {
+TextColor getColorText = {240, 230, 140};
+
+void mainMenu(bool isShowMenu) {
     if (!isShowMenu)
         return;
 
+
     drawWindowMenu();
-    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, NEW_GAME, 240, 230, 140);
-    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE, 240, 230, 140);
-    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME, 240, 230, 140);
-    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, ABOUT, 240, 230, 140);
+    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, NEW_GAME,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, ABOUT,
+                       getColorText.R, getColorText.G, getColorText.B);
+}
+
+void pauseMenu(bool isShowPauseMenu) {
+    if (!isShowPauseMenu)
+        return;
+
+    drawWindowMenu();
+    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, CONTINUE,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, MAIN_MENU,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE,
+                       getColorText.R, getColorText.G, getColorText.B);
+    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME,
+                       getColorText.R, getColorText.G, getColorText.B);
 }
 
 void drawWindowMenu() {
-    glEnable(GL_BLEND);
 
-    setColorRGBA(0, 0, 128, 95);
+    setColorRGBA(0, 0, 128, 90);
 
     glBegin(GL_POLYGON);
     glVertex3d(3, 4, Z_AXIS_MENU);
@@ -49,7 +70,6 @@ void drawWindowMenu() {
     glVertex3d(3, 7, Z_AXIS_MENU);
     glEnd();
 
-    glDisable(GL_BLEND);
 }
 
 void drawWindowAbout(bool isShowAbout) {
@@ -93,3 +113,4 @@ void drawWindowAbout(bool isShowAbout) {
     renderBitmapString(4.15, 5.5, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_SECOND_LINE, 105, 105, 105);
 
 }
+
