@@ -15,13 +15,13 @@ void mainMenu(bool isShowMenu) {
 
 
     drawWindowMenu();
-    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, NEW_GAME,
+    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, NEW_GAME.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE,
+    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME,
+    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, ABOUT,
+    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, ABOUT.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
 }
 
@@ -30,13 +30,13 @@ void pauseMenu(bool isShowPauseMenu) {
         return;
 
     drawWindowMenu();
-    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, CONTINUE,
+    renderBitmapString(5, 4.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, CONTINUE.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, MAIN_MENU,
+    renderBitmapString(5, 5.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, MAIN_MENU.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE,
+    renderBitmapString(5, 5.75, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, SCORE.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
-    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME,
+    renderBitmapString(5, 6.25, Z_AXIS_MENU_TEXT, GLUT_BITMAP_HELVETICA_18, EXIT_GAME.c_str(),
                        getColorText.R, getColorText.G, getColorText.B);
 }
 
@@ -109,8 +109,7 @@ void drawWindowAbout(bool isShowAbout) {
 
     glDisable(GL_BLEND);
 
-    renderBitmapString(4.5, 5.25, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_FIRST_LINE, 105, 105, 105);
-    renderBitmapString(4.15, 5.5, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_SECOND_LINE, 105, 105, 105);
+    renderBitmapString(4.5, 5.25, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_FIRST_LINE.c_str(), 105, 105, 105);
+    renderBitmapString(4.15, 5.5, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_SECOND_LINE.c_str(), 105, 105, 105);
 
 }
-

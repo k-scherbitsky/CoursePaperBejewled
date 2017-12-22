@@ -11,6 +11,8 @@
 void sndInit();
 void sndSelect();
 void sndMatch();
+void sndLeftBtn();
+void sndRightBtn();
 
 void musicStartWindow(MusicState state);
 void musicPauseWindow(MusicState state);

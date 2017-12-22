@@ -10,8 +10,8 @@
 
 void partOfCursor(double x1, double x2, double y1, double y2);
 
-int drawBlueGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawBlueGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glBegin(GL_POLYGON);
     setColorRGBA(176, 224, 230, alpha);
@@ -43,8 +43,8 @@ int drawBlueGem(double x, double y, double z, double alpha) {
     return 0;
 }
 
-int drawGreenGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawGreenGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glEnable(GL_BLEND);
 
@@ -86,8 +86,8 @@ int drawGreenGem(double x, double y, double z, double alpha) {
     return 1;
 }
 
-int drawOrangeGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawOrangeGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glTranslated(0.5, 0.5, 0);
     setColorRGBA(254, 224, 0, alpha);
@@ -115,8 +115,8 @@ int drawOrangeGem(double x, double y, double z, double alpha) {
     return 2;
 }
 
-int drawPurpleGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawPurpleGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glEnable(GL_BLEND);
 
@@ -146,8 +146,8 @@ int drawPurpleGem(double x, double y, double z, double alpha) {
     return 3;
 }
 
-int drawRedGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawRedGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glEnable(GL_BLEND);
 
@@ -190,8 +190,8 @@ int drawRedGem(double x, double y, double z, double alpha) {
     return 4;
 }
 
-int drawYellowGem(double x, double y, double z, double alpha) {
-    glTranslated(x, y, z);
+int drawYellowGem(double x, double y, double alpha) {
+    glTranslated(x, y, 0);
 
     glEnable(GL_BLEND);
 
@@ -251,16 +251,16 @@ int drawCursorGem(double x, double y, bool isMoveCursorGem) {
 }
 
 int drawCursorMenu(double x, double y, bool isMoveCursorMenu) {
-
     if (!isMoveCursorMenu)
         return -1;
 
     glTranslated(x, y, 0);
-
-    partOfCursor(-0.15, -0.35, 0.35, 0.15);
-    partOfCursor(0.15, 0.35, 0.35, 0.15);
-    partOfCursor(0.15, 0.35, -0.35, -0.15);
-    partOfCursor(-0.15, -0.35, -0.35, -0.15);
+    setColorRGBA(192, 192, 192, 100);
+    glBegin(GL_TRIANGLE_FAN);
+    glVertex3d(0, 0, Z_AXIS_MENU_TEXT);
+    glVertex3d(0.2, 0.1, Z_AXIS_MENU_TEXT);
+    glVertex3d(0.0, 0.2, Z_AXIS_MENU_TEXT);
+    glEnd();
 
     glTranslated(-x, -y, 0);
     return 7;
