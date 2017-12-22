@@ -111,5 +111,8 @@ void drawWindowAbout(bool isShowAbout) {
 
     renderBitmapString(4.5, 5.25, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_FIRST_LINE.c_str(), 105, 105, 105);
     renderBitmapString(4.15, 5.5, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_8_BY_13, TEXT_ABOUT_SECOND_LINE.c_str(), 105, 105, 105);
+    renderBitmapString(5.8, 5.9, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_9_BY_15, "And remember!", 240, 128, 128);
+    renderBitmapString(4.6, 6.25, Z_AXIS_MENU_ITEM_TEXT, GLUT_BITMAP_9_BY_15, "This is not a bug, it's a feature!", 240,
+                       128, 128);
 
 }
