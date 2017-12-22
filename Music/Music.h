@@ -9,13 +9,10 @@
 #include "../Structs.h"
 
 void sndInit();
-void sndSelect();
 void sndMatch();
 void sndLeftBtn();
 void sndRightBtn();
 
 void musicStartWindow(MusicState state);
-void musicPauseWindow(MusicState state);
-void musicGameField(MusicState state);
 
 #endif //COURSEWORK_MUSIC_H

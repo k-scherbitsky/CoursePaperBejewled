@@ -11,7 +11,7 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 
-GLuint bgkTex[3], gameOverTex;
+GLuint bgkTex[8], gameOverTex;
 int randBgk;
 
 void setColorRGBA(double red, double green, double blue, double opacity) {
@@ -57,8 +57,8 @@ GLuint loadTexture(std::string fileName) {
 }
 
 void initTex() {
-    randBgk = rand() % 3;
-    for (int i = 0; i < 3; ++i) {
+    randBgk = rand() % 8;
+    for (int i = 0; i < 8; ++i) {
         bgkTex[i] = loadTexture(TEXTURE_PATH + "bgk_" + std::to_string(i) + ".png");
     }
     gameOverTex = loadTexture(TEXTURE_PATH + "game_over-min.png");

@@ -429,7 +429,7 @@ void processNormalKeys(unsigned char key, int x, int y) {
                 object.isSwap = !object.isSwap;
                 gemSwapCursor.xCursor = gemCursor.xCursor;
                 gemSwapCursor.yCursor = gemCursor.yCursor;
-                cout << "isSwap: " << object.isSwap << endl << endl;
+                std::cout << "[INFO] Swap gems - " << object.isSwap <<std::endl;
             }
             break;
         }
