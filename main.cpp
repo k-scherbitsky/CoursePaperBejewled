@@ -18,8 +18,9 @@ Cursor gemSwapCursor;
 Cursor menuCursor = {0, 0, 4.6, 4.52};
 ObjectVisibility object;
 bool isMoving = false;
-int score = 0;
-int i = 1;
+//int i = 1;
+int countScore = 1;
+int score[256];
 int gMsec = 0, gSec = 0, gMin = 0;
 bool stopTimer;
 int pauseMin, pauseSec, pauseMsec;
@@ -112,14 +113,14 @@ void draw() {
     scoreGame(object.isGameField);
 
     if (object.isGameField) {
-        if (setTimer() < 1) {
+        if (setTimer() < 2) {
             drawTimer(gMin, gSec, gMsec);
         } else {
             object.isGameOver = true;
             object.isGameField = false;
             object.isMoveCursor = false;
             object.isShowScore = false;
-            saveRecordTableToFile(score);
+            saveRecordTableToFile(score[countScore]);
         }
     }
 
@@ -158,6 +159,26 @@ void cellFilling() {
     }
 }
 
+bool match(int i, int j){
+    if (grid[i][j].cell == grid[i + 1][j].cell and grid[i][j].cell == grid[i - 1][j].cell and
+        grid[i][j].x != -1) {
+        for (int n = -1; n <= 1; n++) {
+            grid[i + n][j].match++;
+            score[countScore] += grid[i][j].match;
+        }
+        return true;
+    }
+    if (grid[i][j].cell == grid[i][j + 1].cell and grid[i][j].cell == grid[i][j - 1].cell and
+        grid[i][j].x != -1){
+        for (int n = -1; n <= 1; n++) {
+            grid[i][j + n].match++;
+            score[countScore] += grid[i][j].match;
+        }
+        return true;
+    }
+    return false;
+}
+
 void matchFinding() {
     if (!object.isGameField)
         return;
@@ -170,19 +191,20 @@ void matchFinding() {
 
     for (int i = 1; i < 9; i++) {
         for (int j = 1; j < 9; j++) {
-            if (grid[i][j].cell == grid[i + 1][j].cell and grid[i][j].cell == grid[i - 1][j].cell and
+            match(i, j);
+            /*if (grid[i][j].cell == grid[i + 1][j].cell and grid[i][j].cell == grid[i - 1][j].cell and
                 grid[i][j].x != -1)
                 for (int n = -1; n <= 1; n++) {
                     grid[i + n][j].match++;
-                    score += grid[i][j].match / 1;
+                    score += grid[i][j].match;
                 }
 
             if (grid[i][j].cell == grid[i][j + 1].cell and grid[i][j].cell == grid[i][j - 1].cell and
                 grid[i][j].x != -1)
                 for (int n = -1; n <= 1; n++) {
                     grid[i][j + n].match++;
-                    score += grid[i][j].match / 1;
-                }
+                    score += grid[i][j].match;
+                }*/
         }
     }
 
@@ -213,6 +235,7 @@ void matchFinding() {
             }
         }
 
+
     //Обновление сетки
     if (!isMoving) {
         for (int i = 8; i > 0; i--)
@@ -236,7 +259,7 @@ void matchFinding() {
                     grid[i][j].alpha = 255;
                 }
     }
-    renderBitmapString(11.2, 2, 0.02, GLUT_BITMAP_TIMES_ROMAN_24, std::to_string(score).c_str(), 240, 230, 140);
+    renderBitmapString(11.2, 2, 0.02, GLUT_BITMAP_TIMES_ROMAN_24, std::to_string(score[countScore]).c_str(), 240, 230, 140);
 
 }
 
@@ -319,7 +342,7 @@ void stateGame(MenuItems points) {
                 gMsec = 0;
                 gSec = 0;
                 gMin = 0;
-                score = 0;
+                score[countScore] = 0;
                 object.isGameOver = false;
                 object.isShowMenu = false;
                 object.isGameField = true;
@@ -377,7 +400,6 @@ void stateGame(MenuItems points) {
 }
 
 void processNormalKeys(unsigned char key, int x, int y) {
-
     switch (key) {
         case 13: {
             if (object.isShowScoreWindow) {
@@ -387,7 +409,7 @@ void processNormalKeys(unsigned char key, int x, int y) {
 
             if (menuCursor.yCursord == 4.52) {
                 stateGame(FIRST_ITEM);
-                i++;
+                countScore++;
             }
             if (menuCursor.yCursord == 5.02)
                 stateGame(SECOND_ITEM);
@@ -525,7 +547,7 @@ int setTimer() {
     if (stopTimer) {
         return -1;
     } else {
-        if (gMsec == 60) {
+        if (gMsec == 10) {
             gSec++;
             gMsec = 0;
         }
