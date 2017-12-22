@@ -10,14 +10,11 @@
 #include "../BasicFunc/BasicFunc.h"
 #include "../CONSTANTS.h"
 
-ObjectVisibility v;
-
 //Именование рекорда и запись в файл
-
 void saveRecordTableToFile(int score) {
-    std::ofstream recordFile(RECORDS_FILE_NAME);
+    std::ofstream recordFile(RECORDS_FILE_NAME, std::ios_base::app);
     if (recordFile.is_open()) {
-        recordFile << score << "\n";
+        recordFile << score;
         recordFile.close();
         std::cout << "[INFO] Records file successfully saved" << std::endl;
         return;
