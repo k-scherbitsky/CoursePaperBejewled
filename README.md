@@ -1,1 +1,1 @@
-# CoursePaperBejewled
+# Course Paper - Game "Bejewled"
